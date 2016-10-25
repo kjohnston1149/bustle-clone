@@ -1,9 +1,9 @@
 <li div class="well col-sm-3 col-sm-offset-1">
   {{article.title}}
-  by:
-  {{article.author}}
+  <br>
+  <p>by: {{article.author}}</p>
   {{article.published}}
-  <img src={{article.image}} alt={{article.title}}>
+  {{#link-to 'article' article.id}}<img src={{article.image}} alt={{article.title}}>{{/link-to}}
   <br>
   <br>
   <button {{action 'delete' article}}>Delete Article</button>
