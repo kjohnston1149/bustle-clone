@@ -1,7 +1,8 @@
-{{#link-to 'about'}}About{{/link-to}}
-
+<div class="row">
 <ul>
   {{#each model as |article|}}
-    {{article-tile article=article}}
+  {{article-tile article=article destroyArticle="destroyArticle"}}
   {{/each}}
 </ul>
+</div>
+{{#link-to 'about'}}About{{/link-to}}
